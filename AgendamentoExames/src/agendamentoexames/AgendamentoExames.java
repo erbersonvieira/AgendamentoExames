@@ -1,14 +1,12 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
+ * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package agendamentoexames;
 
 /**
  *
- * @author erberson
+ * @author Adm
  */
 public class AgendamentoExames {
 
@@ -18,5 +16,4 @@ public class AgendamentoExames {
     public static void main(String[] args) {
         // TODO code application logic here
     }
-    
 }
