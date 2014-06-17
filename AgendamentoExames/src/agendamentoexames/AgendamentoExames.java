@@ -4,6 +4,8 @@
  */
 package agendamentoexames;
 
+import Interface.FrmPrincipal;
+
 /**
  *
  * @author Adm
@@ -15,5 +17,8 @@ public class AgendamentoExames {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        FrmPrincipal f =  new FrmPrincipal();
+         f.setVisible(true);
     }
 }
