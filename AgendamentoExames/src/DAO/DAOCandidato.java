@@ -37,7 +37,7 @@ public class DAOCandidato {
     ResultSet rs = null;
     try {
       conn = co.getConnection();
-      String sql = "SELECT idCandidato, nomeCandidato, cpfCandidato, sexo from Candidato order by nomeCandidato";
+      String sql = "SELECT idCandidato, nomeCandidato, cpfCandidato, sexo from candidato order by nomeCandidato";
       pstmt = conn.prepareStatement(sql);
       rs = pstmt.executeQuery();
       while(rs.next()) {
@@ -65,7 +65,7 @@ public class DAOCandidato {
     public int insert(Candidato c) throws SQLException {
     String sql;
     int a = 0;
-    sql = "INSERT INTO Candidato (idCandidato, nomeCandidato, cpfCandidato, sexo) VALUES (?, ?, ?, ?)";
+    sql = "INSERT INTO candidato (idCandidato, nomeCandidato, cpfCandidato, sexo) VALUES (?, ?, ?, ?)";
     Connection conn = null;
     PreparedStatement pstmt = null;
     ResultSet rs = null;

@@ -36,7 +36,7 @@ public class Conectar {
   public static Connection getConnection() throws SQLException {
     Connection connection = null;
     try {
-      connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbexames"+"?user=root&password=root");
+      connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbexames"+"?user=root&password=1404");
     }
     catch (SQLException sex) {
        throw new SQLException(sex.getMessage());
