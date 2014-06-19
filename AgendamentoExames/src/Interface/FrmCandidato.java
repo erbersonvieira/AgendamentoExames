@@ -8,7 +8,7 @@ package Interface;
 
 
 
-import Fachada.Fachada;
+import Fachada.FachadaCandidato;
 import javax.swing.JOptionPane;
 import Beans.*;
 import DAO.*;
@@ -219,7 +219,7 @@ public class FrmCandidato extends javax.swing.JFrame{
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
        
-        Fachada f = new Fachada();
+        FachadaCandidato f = new FachadaCandidato();
         int valor = 0;
         Candidato c = new Candidato();
         //populate(material, rs);
@@ -245,7 +245,7 @@ public class FrmCandidato extends javax.swing.JFrame{
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        Fachada f = new Fachada();
+        FachadaCandidato f = new FachadaCandidato();
         ArrayList<Candidato> list = new ArrayList<Candidato>();
         list = f.listagemGeralCandidato();
         this.tabela();

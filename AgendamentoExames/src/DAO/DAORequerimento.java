@@ -52,7 +52,7 @@ public class DAORequerimento {
     ResultSet rs = null;
     try {
       conn = co.getConnection();
-      String sql = "SELECT idRequerimento, nomeRequerimento from requerimento order by nomeRequerimento";
+      String sql = "SELECT idRequerimento, nomeRequerimento from Requerimento order by nomeRequerimento";
       pstmt = conn.prepareStatement(sql);
       rs = pstmt.executeQuery();
       while(rs.next()) {
@@ -78,15 +78,14 @@ public class DAORequerimento {
     public int insert(Requerimento r) throws SQLException {
     String sql;
     int a = 0;
-    sql = "INSERT INTO requerimento (idRequerimento, nomeRequerimento) VALUES (?, ?)";
+    sql = "INSERT INTO Requerimento (nomeRequerimento) VALUES (?)";
     Connection conn = null;
     PreparedStatement pstmt = null;
     ResultSet rs = null;
     try {
       conn = co.getConnection();
       pstmt = conn.prepareStatement(sql);
-      pstmt.setInt(1, r.getIdRequerimento());
-      pstmt.setString(2, r.getNomeRequerimento());
+      pstmt.setString(1, r.getNomeRequerimento());
       a = pstmt.executeUpdate();
       pstmt.close();
 //      conn.commit();

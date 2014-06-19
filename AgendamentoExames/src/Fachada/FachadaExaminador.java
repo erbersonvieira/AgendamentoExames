@@ -13,9 +13,9 @@ import java.sql.SQLException;
  *
  * @author Adm
  */
-public class FachadaCandidato {
+public class FachadaExaminador {
   private Conectar conn = null;
-  public FachadaCandidato(){
+  public FachadaExaminador(){
         this.conn = Conectar.getInstance();
     }
 
@@ -34,28 +34,31 @@ public class FachadaCandidato {
     }
 
     // Início dos Métodos da Fachada.
-    // Candidato
-        public ArrayList<Candidato> listagemGeralCandidato() {
+        
+
+    // Examinador
+        public ArrayList<Examinador> listagemGeralExaminador() {
          ArrayList ob = new ArrayList();
        try {
-           DAOCandidato meuDAO = new DAOCandidato(this.getConn());
+           DAOExaminador meuDAO = new DAOExaminador(this.getConn());
            ob = meuDAO.list();
         } catch (Exception exception) {
-            System.out.println("Listagem Candidatos não localizada.");
+            System.out.println("Listagem examinadores não localizada.");
       }
        return ob;
     }
 
-    public int inserirCandidato(Candidato obj) {
+    public int inserirExaminador(Examinador obj) {
        int retorno = 0;
        try {
-        DAOCandidato meuDAO = new DAOCandidato(this.getConn());
+        DAOExaminador meuDAO = new DAOExaminador(this.getConn());
         retorno = meuDAO.insert(obj);
 
       } catch (Exception exception){
-         System.out.println("Inclusão Candidato não realizada.");
+         System.out.println("Inclusão Examinador não realizada.");
       }
        return  retorno;
     }   
+   
     
 }

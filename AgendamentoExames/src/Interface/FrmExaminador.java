@@ -7,7 +7,7 @@
 package Interface;
 
 import Beans.Examinador;
-import Fachada.Fachada;
+import Fachada.FachadaExaminador;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -199,7 +199,7 @@ public class FrmExaminador extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
        
-        Fachada f = new Fachada();
+        FachadaExaminador f = new FachadaExaminador();
         int valor = 0;
         Examinador exam = new Examinador();
         //populate(material, rs);
@@ -223,7 +223,7 @@ public class FrmExaminador extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        Fachada f = new Fachada();
+        FachadaExaminador f = new FachadaExaminador();
         ArrayList<Examinador> list = new ArrayList<Examinador>();
         list = f.listagemGeralExaminador();
         this.tabela();
