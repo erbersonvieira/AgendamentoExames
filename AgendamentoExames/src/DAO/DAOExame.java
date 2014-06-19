@@ -66,15 +66,14 @@ public class DAOExame {
     public int insert(Exame ex) throws SQLException {
     String sql;
     int a = 0;
-    sql = "INSERT INTO Exame (idExame, nomeExame) VALUES (?, ?)";
+    sql = "INSERT INTO Exame (nomeExame) VALUES (?)";
     Connection conn = null;
     PreparedStatement pstmt = null;
     ResultSet rs = null;
     try {
       conn = co.getConnection();
       pstmt = conn.prepareStatement(sql);
-      pstmt.setInt(1, ex.getIdExame());
-      pstmt.setString(2, ex.getNomeExame());
+      pstmt.setString(1, ex.getNomeExame());
       a = pstmt.executeUpdate();
       pstmt.close();
 //      conn.commit();
